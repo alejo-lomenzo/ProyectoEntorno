@@ -5,24 +5,25 @@ echo ~~~~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~~~
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 PS3="Please select the script to run:"
-SCRIPTS=("findNames" "blankLinesCounter")
+SCRIPTS=("statsWords" "statsUsageWords" "findNames" "statsSentences" "blankLinesCounter")
 
 select scr in "${SCRIPTS[@]}" Exit
 do
     case $scr in
-	"statsWords.sh")
-	  ./statsWords.sh loren.txt
+	"statsWords")
+	  bash statsWords.sh loren.txt
 	  ;;
-	"statsUsageWords.sh")
-	  ./statsUsageWords.sh loren.txt 
-	"findNames.sh")
-	  ./findNames.sh loren.txt
+	"statsUsageWords")
+	  bash statsUsageWords.sh loren.txt
+	  ;; 
+	"findNames")
+	  bash findNames.sh loren.txt
 	  ;;
-	"statsSentences.sh")
-	  ./statsSentences.sh loren.txt
+	"statsSentences")
+	  bash statsSentences.sh loren.txt
 	  ;;
 	"blankLinesCounter")
-	  ./blankLinesCounter.sh loren.txt
+	  bash blankLinesCounter.sh loren.txt
 	  ;;
 	"Exit")
 	  exit 0
