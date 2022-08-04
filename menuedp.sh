@@ -15,7 +15,7 @@ do
 	  ;;
 	"statsUsageWords.sh")
 	  ./statsUsageWords.sh loren.txt 
-	"findNames")
+	"findNames.sh")
 	  ./findNames.sh loren.txt
 	  ;;
 	"statsSentences.sh")
